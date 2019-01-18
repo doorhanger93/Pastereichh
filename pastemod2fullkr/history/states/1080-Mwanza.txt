@@ -1,0 +1,24 @@
+
+state={
+	id=1080
+	name="STATE_1080"
+
+	history={
+		owner = MAF
+		add_core_of = MAF
+		add_core_of = TNZ
+		add_core_of = EAF
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		11017 13835 13838 13839 13840 15215 
+	}
+	manpower=712540
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,21 @@
+state={
+	id=1172
+	name="STATE_1172"
+	provinces={
+		14554 
+	}
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = MTN
+		add_claim_by = ALB
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+	manpower=32430
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

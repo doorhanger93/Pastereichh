@@ -1,0 +1,19 @@
+state={
+	id=1252
+	name="STATE_1252"
+	provinces={
+		233 
+	}
+	history={
+		owner = LIT
+		add_core_of = LIT
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=22145
+	state_category = enclave
+	buildings_max_level_factor=1.000
+}

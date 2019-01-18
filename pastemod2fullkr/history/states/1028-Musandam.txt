@@ -1,0 +1,19 @@
+state={
+	id=1028
+	name="STATE_1028"
+	provinces={
+		13728 
+	}
+	history = {
+		owner = OMA
+		add_core_of = OMA
+		add_claim_by = UAE
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	manpower=2480
+	buildings_max_level_factor=1.000
+	state_category = enclave
+}

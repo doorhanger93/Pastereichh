@@ -1,0 +1,24 @@
+
+state={
+	id=958
+	name="STATE_958"
+
+	history={
+		owner = MAF
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			13947 1 
+		}
+
+	}
+
+	provinces={
+		697 7872 10538 13647 13939 13940 13941 13942 13943 13944 13945 13946 13947 13948 13951 13953 13954 13959 
+	}
+	manpower=436460
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

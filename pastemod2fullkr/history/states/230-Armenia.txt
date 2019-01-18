@@ -1,0 +1,28 @@
+
+state={
+	id=230
+	name="STATE_230"
+
+	history={
+		owner = ARM
+		add_core_of = ARM
+		victory_points = {
+			12320 3
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 2
+
+		}
+
+	}
+
+	provinces={
+		3564 6997 12320 12450 13123 
+	}
+	manpower=820082
+	buildings_max_level_factor=1.000
+	state_category=city
+}

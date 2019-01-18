@@ -1,0 +1,28 @@
+
+state={
+	id=268
+	name="STATE_268"
+
+	history={
+		owner = GER
+		add_core_of=SOM
+		add_claim_by = ETH
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			14159 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		4985 8124 14158 14159 14160 
+	}
+	manpower=85232
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

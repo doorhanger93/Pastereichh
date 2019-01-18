@@ -1,0 +1,27 @@
+
+state={
+	id=857
+	name="STATE_857"
+
+	history={
+		owner = GEA
+		add_core_of = VIN
+		add_core_of = INC
+		buildings = {
+			infrastructure = 3
+			4119 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1073 1157 4119 7015 7093 7518 9948 12008 12048 12065 
+	}
+	manpower=2528000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

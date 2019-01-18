@@ -1,0 +1,27 @@
+state={
+	id=777 # Woiwodschaft Schlesien
+	name="STATE_777"
+	manpower = 1533500
+	resources={
+		steel=4
+		
+	}
+	
+	state_category = large_city
+
+	history={
+		owner = GER
+		add_core_of = GER
+		buildings = {
+			infrastructure = 6
+
+		}
+		victory_points = {
+			6464 10 
+		}
+	}
+
+	provinces={
+		506 6464
+	}
+}

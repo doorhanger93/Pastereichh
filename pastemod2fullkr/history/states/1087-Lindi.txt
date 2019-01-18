@@ -1,0 +1,21 @@
+state={
+	id=1087
+	name="STATE_1087"
+	provinces={
+		12944 13655 13787 
+	}
+	history={
+		owner = MAF
+		add_core_of = MAF
+		add_core_of = TNZ
+		add_core_of = EAF
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+	manpower=266400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

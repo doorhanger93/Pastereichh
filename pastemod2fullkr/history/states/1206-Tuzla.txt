@@ -1,0 +1,25 @@
+
+state={
+	id=1206
+	name="STATE_1206"
+	provinces={
+		6799 9922 11572 
+	}
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = BOS
+		victory_points = {
+			6799 1 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+
+	}
+	manpower=651992
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=1177
+	name="STATE_1177"
+	provinces={
+		3896 9780 11762 
+	}
+	history={
+		owner = ALB
+		add_core_of = ALB
+		victory_points = {
+			11762 1 
+		}
+		buildings = {
+			infrastructure = 1
+			
+		}
+
+	}
+	manpower=237300
+	state_category = wasteland
+}

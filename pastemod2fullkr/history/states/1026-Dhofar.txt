@@ -1,0 +1,21 @@
+state={
+	id=1026
+	name="STATE_1026"
+	provinces={
+		2059 2103 13719 
+	}
+	manpower = 22103
+	buildings_max_level_factor = 1.000
+
+	history = {
+		owner = OMA
+		add_claim_by = YEM
+		add_core_of = OMA
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	state_category = pastoral
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=1297
+	name="STATE_1297"
+	provinces={
+		1170 1492 2061 7562 12363 
+	}
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_core_of = SHA
+		add_claim_by = BUR
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+	}
+	manpower=0 #1117000
+	state_category = small_town
+	buildings_max_level_factor=1.000
+}

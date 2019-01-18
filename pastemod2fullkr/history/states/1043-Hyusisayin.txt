@@ -1,0 +1,23 @@
+state={
+	id=1043
+	name="STATE_1043"
+	provinces={
+		11708 12380 12441 
+	}
+	history={
+		owner = ARM
+		add_core_of = ARM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			12441 1
+		}
+
+	}
+	manpower=317504
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

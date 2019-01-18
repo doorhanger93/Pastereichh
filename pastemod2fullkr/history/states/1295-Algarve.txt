@@ -1,0 +1,30 @@
+
+state={
+	id=1295
+	name="STATE_1295"
+	provinces={
+		3790 6880 
+	}
+	history={
+		victory_points = {
+			3790 3 
+		}
+		victory_points = {
+			6880 1 
+		}
+		owner = POR
+		add_core_of = POR
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			3790 = {
+				naval_base = 2
+
+			}
+
+		}
+	}
+	manpower=300800
+	state_category = small_town
+	buildings_max_level_factor=1.000
+}

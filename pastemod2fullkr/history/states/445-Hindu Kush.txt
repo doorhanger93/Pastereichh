@@ -1,0 +1,27 @@
+
+state={
+	id=445
+	name="STATE_445"
+
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_claim_by = PRF
+		victory_points = {
+			8098 1 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+
+		}
+
+	}
+
+	provinces={
+		1107 4990 7847 7903 7975 8044 10139 10735 10813 15096 
+	}
+	manpower=1090000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

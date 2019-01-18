@@ -1,0 +1,21 @@
+state={
+	id=1089
+	name="STATE_1089"
+	provinces={
+		13793 13796 13797 
+	}
+	history={
+		owner = MAF
+		add_core_of = MAF
+		add_core_of = TNZ
+		add_core_of = EAF
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+	manpower=81400
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

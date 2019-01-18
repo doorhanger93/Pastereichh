@@ -1,0 +1,24 @@
+
+state={
+	id=752
+	name="STATE_752"
+
+	history={
+		owner = YEM
+		add_core_of = YEM
+		victory_points = {
+			13712 1
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+
+	provinces={
+		2029 4976 12894 13079 13712 13714 13715 13716 13718 
+	}
+	manpower=110921
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

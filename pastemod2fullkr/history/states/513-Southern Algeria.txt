@@ -1,0 +1,26 @@
+
+state={
+	id=513
+	name="STATE_513"
+
+	history={
+		owner = NFA
+		add_core_of = NFA
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			14394 1 
+		}
+
+	}
+
+	provinces={
+		1958 8088 10731 14287 14291 14294 14299 14304 14309 14319 14327 14332 14339 14348 14350 14352 14356 14358 14361 14362 14365 14367 14369 14370 14371 14372 14374 14375 14377 14380 14384 14385 14391 14394 14401 
+	}
+	manpower=24730
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

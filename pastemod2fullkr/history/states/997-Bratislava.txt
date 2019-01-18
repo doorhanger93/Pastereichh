@@ -1,0 +1,26 @@
+
+state={
+	id=997
+	name="STATE_997"
+	provinces={
+		9539 9692 
+	}
+	
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			9692 20 
+		}
+
+	}
+	manpower=141543
+	buildings_max_level_factor=1.000
+	state_category=city
+}

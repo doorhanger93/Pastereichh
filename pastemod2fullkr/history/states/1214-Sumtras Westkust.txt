@@ -1,0 +1,26 @@
+
+state={
+	id=1214
+	name="STATE_1214"
+	provinces={
+		1428 7368 10354 10382 
+	}
+	resources={
+		rubber=8.000
+		steel=5.000
+		aluminium=3.000
+	}
+	history={
+		owner = DEI
+		add_core_of = DEI
+		add_core_of = INS
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=2010298
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

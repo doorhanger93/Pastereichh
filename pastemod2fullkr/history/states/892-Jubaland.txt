@@ -1,0 +1,22 @@
+
+state={
+	id=892
+	name="STATE_892"
+
+	history={
+		owner = MAF
+		add_core_of = SOM
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		11014 12941 
+	}
+	manpower=129470
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=959
+	name="STATE_959"
+
+	history={
+		owner = DEI
+		add_core_of = DEI
+		add_core_of = INS
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1546 4468 4509 4524 4552 7487 7512 7542 7585 12315 12386 
+	}
+	manpower=123784
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

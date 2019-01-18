@@ -1,0 +1,28 @@
+
+state={
+	id=1162
+	name="STATE_1162"
+	provinces={
+		1002 13045 
+	}
+	history={
+		owner = GEA
+		add_core_of = GEA
+		buildings = {
+			infrastructure = 2
+			13045 = {
+				naval_base = 1
+
+			}
+			1002 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+	manpower=2276
+	state_category = small_island
+	buildings_max_level_factor=1.000
+}

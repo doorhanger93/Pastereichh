@@ -1,0 +1,22 @@
+
+state={
+	id=680
+	name="STATE_680"
+
+	history={
+		owner = OTT
+		add_core_of = KUR
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		901 1549 1578 1606 1634 6883 10882 13738 
+	}
+	manpower=143210
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

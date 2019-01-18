@@ -1,0 +1,20 @@
+state={
+	id=1205
+	name="STATE_1205"
+	provinces={
+		11574 9591 
+	}
+	history={
+		owner = CRO
+		add_core_of = CRO
+		add_core_of = YUG
+		add_core_of = BOS
+		buildings = {
+			infrastructure = 4
+		}
+
+	}
+	manpower=97962
+	state_category=enclave
+	buildings_max_level_factor=1.000
+}

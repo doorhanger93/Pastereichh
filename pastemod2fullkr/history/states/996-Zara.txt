@@ -1,0 +1,30 @@
+
+state={
+	id=996
+	name="STATE_996"
+
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		buildings = {
+			infrastructure = 5
+			3943 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			3943 1
+		}
+
+	}
+
+	provinces={
+		3943 
+	}
+	manpower=20300
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

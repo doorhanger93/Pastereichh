@@ -1,0 +1,20 @@
+state={
+	id=1209
+	name="STATE_1209"
+	provinces={
+		606 
+	}
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = BOS
+		buildings = {
+			infrastructure = 5
+		}
+
+	}
+	manpower=125928
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

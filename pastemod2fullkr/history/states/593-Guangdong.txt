@@ -1,0 +1,29 @@
+
+state={
+	id=593
+	name="STATE_593"
+	resources={
+		tungsten=20.000
+		steel=20.000
+		chromium=4.000
+	}
+
+	history={
+		owner = LEP
+		add_core_of = LEP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+
+		}
+
+	}
+
+	provinces={
+		1078 1120 1162 1202 4050 4165 4207 7004 7108 7141 7182 9970 9978 9982 9997 10080 10121 11918 12014 12095 12378 
+	}
+	manpower=12700000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

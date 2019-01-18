@@ -1,0 +1,24 @@
+
+state={
+	id=1107
+	name="STATE_1107"
+
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_claim_by = AFG
+		add_claim_by = INC
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1910 2041 10821 15111 
+	}
+	manpower=1010000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

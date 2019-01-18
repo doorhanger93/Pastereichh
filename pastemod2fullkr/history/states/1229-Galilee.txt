@@ -1,0 +1,21 @@
+
+state={
+	id=1229
+	name="STATE_1229"
+	provinces={
+		1065 14908 
+	}
+	history={
+		owner = OTT
+		add_core_of = OTT
+		add_core_of = PAL
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=155500
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

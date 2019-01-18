@@ -1,0 +1,20 @@
+
+state={
+	id=1156
+	name="STATE_1156"
+	provinces={
+		14383 14388 14390 14397 
+	}
+	history={
+		owner = NFA
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+	manpower=10749
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

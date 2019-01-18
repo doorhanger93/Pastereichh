@@ -1,0 +1,19 @@
+
+state={
+	id=1247
+	name="STATE_1247"
+	provinces={
+		14963 14985 15003 
+	}
+	history={
+		owner = JBS
+		add_core_of = JBS
+		buildings = {
+			infrastructure = 0
+
+		}
+	}
+	manpower=653
+	state_category = wasteland
+	buildings_max_level_factor=1.000
+}

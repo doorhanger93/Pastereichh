@@ -1,0 +1,21 @@
+state={
+	id=1115
+	name="STATE_1115"
+	provinces={
+		4087 8063 
+	}
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_core_of = KAC
+		add_claim_by = BUR
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	manpower=501000
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

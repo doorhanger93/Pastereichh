@@ -1,0 +1,24 @@
+
+state={
+	id=1125
+	name="STATE_1125"
+
+	history={
+		owner = MAF
+		add_core_of = MAF
+		add_core_of = GHA
+		add_core_of = TOG
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		14085 14093 14103 14110 14128 14132 14137 
+	}
+	manpower=294000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

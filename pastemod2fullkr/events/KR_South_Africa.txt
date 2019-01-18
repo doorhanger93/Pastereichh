@@ -1,0 +1,1044 @@
+﻿###########################
+# South Africa Events
+###########################
+
+add_namespace = saf
+
+### Introduction events
+
+country_event = {
+	id = saf.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.1"}
+	title = saf.1.t
+	desc = saf.1.d
+	picture = GFX_report_event_SAF_cape_town
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.1.a
+		hidden_effect = {
+			country_event = { id = saf.2 days = 2 }
+		}
+	}
+}
+
+country_event = {
+	id = saf.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.2"}
+	title = saf.2.t
+	desc = saf.2.d
+	picture = GFX_report_event_SAF_parliament_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.2.a
+	}
+}
+
+
+### Black Monday events
+
+# Initial Black Monday event
+country_event = {
+	id = saf.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.3"}
+	title = saf.3.t
+	desc = saf.3.d
+	picture = NOR_black_monday_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.3.a
+		add_ideas = SAF_black_monday_1
+		add_stability = -0.10
+	}
+}
+
+# Dealing with the crisis (fired by focus)
+country_event = {
+	id = saf.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.4"}
+	title = saf.4.t
+	desc = saf.4.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = {
+			flag = SAF_segregation_reform
+			value = 0
+		}
+	}
+
+	option = {
+		name = saf.4.a # The Dominion Party will solve this crisis alone
+		ai_chance = { base = 60 }
+		set_country_flag = SAF_NP_ALONE
+		add_political_power = -120
+	}
+
+	option = {
+		name = saf.4.b # Work with the Progressives and Liberals
+		ai_chance = { base = 30 }
+		set_country_flag = SAF_NP_PROGLIB
+		add_political_power = -200
+		swap_ideas = {
+			remove_idea = SAF_divided_government_1
+			add_idea = SAF_divided_government_2
+		}
+	}
+
+	option = {
+		name = saf.4.c # Co-operate with all major parties
+		ai_chance = { base = 10 }
+		set_country_flag = SAF_NP_UNITED
+		add_political_power = -300
+		swap_ideas = {
+			remove_idea = SAF_divided_government_1
+			add_idea = SAF_divided_government_3
+		}
+	}
+}
+
+# National Party splits
+country_event = {
+	id = saf.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.5"}
+	title = saf.5.t
+	picture = GFX_report_event_SAF_malan
+
+	desc = {
+		text = saf.5.d.coalition_dominion
+		trigger = { has_country_flag = SAF_NP_UNITED }
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		has_government = authoritarian_democrat
+		OR = {
+			has_country_flag = SAF_NP_UNITED
+			has_country_flag = { flag = SAF_segregation_reform value > 0 }
+		}
+		NOT = {
+			has_country_flag = SAF_PNP_split
+			has_country_flag = SAF_1938_elections_held
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = saf.5.a
+		set_country_flag = SAF_PNP_split
+		if = {
+			limit = { has_idea = SAF_D_F_Malan_hog_pau }
+			remove_ideas = SAF_D_F_Malan_hog_pau
+			add_ideas = SAF_TE_Doenges_hog_ade
+		}
+		set_party_name = { ideology = paternal_autocrat name = SAF_paternal_autocrat_party_PNP long_name = SAF_paternal_autocrat_party_long_PNP }
+		add_stability = -0.02
+		add_popularity = { ideology = paternal_autocrat popularity = 0.20 }
+	}
+}
+
+# Labour coalition breaks up
+country_event = {
+	id = saf.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.6"}
+	title = saf.6.t
+	desc = saf.6.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		has_government = authoritarian_democrat
+		has_country_flag = SAF_NP_LABOUR
+		NOT = { has_country_flag = SAF_1938_elections_held }
+		has_idea = SAF_divided_government_2
+		has_country_flag = { flag = SAF_segregation_reform value < -1 }
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = saf.6.a
+		clr_country_flag = SAF_NP_LABOUR
+		set_country_flag = SAF_NP_ALONE
+		swap_ideas = {
+			remove_idea = SAF_divided_government_2
+			add_idea = SAF_divided_government_1
+		}
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.20 }
+	}
+}
+
+# Dominion coalition breaks up
+country_event = {
+	id = saf.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.7"}
+	title = saf.7.t
+	desc = saf.7.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		has_government = authoritarian_democrat
+		has_country_flag = SAF_NP_UNITED
+		has_country_flag = SAF_1938_elections_held
+		has_idea = SAF_divided_government_3
+		has_country_flag = { flag = SAF_segregation_reform value < 0 }
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = saf.6.a
+		clr_country_flag = SAF_NP_UNITED
+		set_country_flag = SAF_NP_ALONE
+		swap_ideas = {
+			remove_idea = SAF_divided_government_3
+			add_idea = SAF_divided_government_1
+		}
+	}
+}
+
+# Representation of Natives Act (fired by focus)
+country_event = {
+	id = saf.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.10"}
+	title = saf.10.t
+	picture = GFX_report_event_SAF_black_protest
+	desc = saf.10.d 
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.10.a
+		ai_chance = {
+			base = 90
+		}
+		add_political_power = -50
+		add_stability = 0.05
+	}
+	option = {
+		name = saf.10.c #Establish the Native Representation Council as a compromise
+		trigger = { NOT = { has_country_flag = SAF_NP_UNITED } }
+		ai_chance = {
+			base = 10
+		}
+		modify_country_flag = { flag = SAF_segregation_reform value = -1 }
+		add_political_power = 50
+		add_stability = -0.05
+		SAF_increase_segregation_1 = yes
+	}
+}
+
+# The Extent of Native Autonomy (fired by focus)
+country_event = {
+	id = saf.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.11"}
+	title = saf.11.t
+	desc = saf.11.d
+	picture = GFX_report_event_SAF_cape_town
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.11.a #Their authority stops at the border
+		ai_chance = { factor = 80 }
+		add_political_power = 50
+		add_stability = -0.05
+	}
+	option = {
+		name = saf.11.b #They will fully represent their people
+		ai_chance = { factor = 20 }
+		modify_country_flag = { flag = SAF_segregation_reform value = 1 }
+		add_political_power = -50
+		add_stability = 0.05
+		decrease_ruling_party_popularity_by_5 = yes
+		SAF_reform_segregation_1 = yes
+	}
+}
+
+# South Africa asks the Entente for assistance
+country_event = {
+	id = saf.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.15"}
+	title = saf.15.t
+	desc = saf.15.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.15.a #Yes we welcome trade with the South Africans...
+		ai_chance = { factor = 90 }
+		add_political_power = 50
+		add_opinion_modifier = { target = SAF modifier = SAF_resumed_relations }
+		remove_opinion_modifier = { target = SAF modifier = embargo }
+		SAF = {
+			country_event = { id = saf.17 days = 3 }
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = CAN
+					NOT = { tag = SAF }
+					NOT = { tag = CAN }
+				}
+				country_event = { id = saf.16 days = 3 }
+			}
+		}
+	}
+}
+
+# Entente member normalized trade with South Africa
+country_event = {
+	id = saf.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.16"}
+	title = saf.16.t
+	desc = saf.16.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.16.a
+		add_political_power = 50
+		add_opinion_modifier = { target = SAF modifier = SAF_resumed_relations }
+		remove_opinion_modifier = { target = SAF modifier = embargo }
+		hidden_effect = {
+			SAF = { remove_opinion_modifier = { target = ROOT modifier = embargo } }
+			reverse_add_opinion_modifier = { target = SAF modifier = SAF_resumed_relations }
+		}
+	}
+}
+
+# Entente agrees to normalize trade
+country_event = {
+	id = saf.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.17"}
+	title = saf.17.t
+	desc = saf.17.d
+	picture = diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.17.a
+		add_political_power = 50
+		add_opinion_modifier = { target = CAN modifier = SAF_resumed_relations }
+		remove_opinion_modifier = { target = CAN modifier = embargo }
+	}
+}
+
+
+### 1938 Election events
+
+# Port Elizabeth Declaration
+country_event = {
+	id = saf.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.25"}
+	title = saf.25.t
+	desc = saf.25.d
+	picture = GFX_report_event_SAF_smuts
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1938.3.1
+		owns_state = 946
+		has_government = authoritarian_democrat
+		NOT = { has_country_flag = SAF_1938_elections_held }
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	option = {
+		name = saf.25.a
+		add_stability = -0.10
+		add_popularity = { ideology = social_conservative popularity = 0.1 }
+	}
+}
+
+# The 1938 Union of South Africa General Elections (fired by on_new_term_election)
+country_event = {
+	id = saf.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.26"}
+	title = saf.26.t
+	desc = saf.26.d
+	picture = GFX_report_event_SAF_parliament_3
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SAF
+		NOT = { has_country_flag = SAF_1938_elections_held }
+	}
+
+	immediate = {
+		remove_all_ministers = yes
+		clr_country_flag = SAF_NP_ALONE
+		clr_country_flag = SAF_NP_LABOUR
+		clr_country_flag = SAF_NP_UNITED
+		hidden_effect = {
+			create_country_leader = {
+				name = "James Hertzog"
+				desc = "POLITICS_JAMES_HERTZOG_DESC"
+				picture = "J._B._M._Hertzog_I.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+		}
+	}
+
+	option = {
+		name = saf.26.a #The National Party damages the Dominion majority
+		ai_chance = { factor = 50 }
+		set_country_flag = SAF_1938_elections_held
+		add_political_power = -100
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		add_ideas = SAF_Jan_Hendrik_Hofmeyr_hog_mli
+		add_ideas = SAF_Pierre_van_Ryneveld_for_sco
+		add_ideas = SAF_Charles_T_te_Water_eco_sco
+		add_ideas = SAF_C_F_Stallard_sec_mli
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		hidden_effect = {
+			news_event = { id = worldnews.107 days = 1 }
+		}
+	}
+
+	option = {
+		name = saf.26.b #The Dominion Party Wins!
+		ai_chance = { factor = 50 }
+		set_country_flag = SAF_1938_elections_held
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		add_ideas = SAF_Jan_Hendrik_Hofmeyr_hog_mli
+		add_ideas = SAF_Pierre_van_Ryneveld_for_sco
+		add_ideas = SAF_Charles_T_te_Water_eco_sco
+		add_ideas = SAF_C_F_Stallard_sec_mli
+		hidden_effect = {
+			news_event = { id = worldnews.108 days = 1 }
+		}
+	}
+}
+
+# Nationalist Party victory (fired by focus)
+country_event = {
+	id = saf.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.27"}
+	title = saf.27.t
+	desc = saf.27.d
+	picture = GFX_report_event_SAF_hertzog
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.27.a #We will keep fighting the good fight!
+		add_political_power = -20
+	}
+}
+
+# Dominion Party victory (fired by focus)
+country_event = {
+	id = saf.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.28"}
+	title = saf.28.t
+	desc = saf.28.d
+	picture = GFX_report_event_SAF_smuts
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.28.a
+		add_political_power = -200
+	}
+	option = {
+		name = saf.28.b
+		add_political_power = 50
+		custom_effect_tooltip = SAF_two_year_wait2
+		hidden_effect = { add_timed_idea = { idea = SAF_federation_wait days = 730 } }
+	}
+}
+
+# Federation implemented (fired by focus)
+country_event = {
+	id = saf.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.35"}
+	title = saf.35.t
+	desc = saf.35.d
+	picture = GFX_report_event_SAF_crowd_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.35.a
+		add_state_core = 542
+	}
+}
+
+# South Africa asks to reintegrate with the Empire (fired by focus)
+country_event = {
+	id = saf.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.36"}
+	title = saf.36.t
+	desc = saf.36.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.36.a
+		add_political_power = 50
+		add_opinion_modifier = { target = SAF modifier = ITA_likes_govt }
+		remove_opinion_modifier = { target = SAF modifier = embargo }
+		SAF = { country_event = { id = saf.37 days = 3 } }
+		hidden_effect = {
+			every_country = {
+				limit = { is_in_faction_with = ROOT }
+				remove_opinion_modifier = { target = SAF modifier = embargo }
+			}
+		}
+	}
+}
+
+# Canada agrees to let South Africa join
+country_event = {
+	id = saf.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.37"}
+	title = saf.37.t
+	desc = saf.37.d
+	picture = diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.37.a
+		add_political_power = 50
+		add_opinion_modifier = { target = FROM modifier = ITA_likes_govt }
+		every_country = {
+			limit = {
+				exists = yes
+				OR = {
+					tag = GER
+					is_in_faction_with = GER
+				}
+			}
+			add_opinion_modifier = { target = SAF modifier = SAF_joined_entente }
+		}
+		hidden_effect = {
+			remove_opinion_modifier = { target = FROM modifier = embargo }
+			every_country = {
+				limit = { is_in_faction_with = FROM }
+				ROOT = { remove_opinion_modifier = { target = PREV modifier = embargo } }
+			}
+		}
+	}
+}
+
+# The Restoration (fired by focus)
+country_event = {
+	id = saf.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.39"}
+	title = saf.39.t
+	desc = saf.39.d
+	picture = GFX_report_event_SAF_parliament_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.39.1 #Reinforce the status-quo
+		ai_chance = { factor = 80 }
+		add_political_power = 50
+		hidden_effect = {
+			remove_ideas_with_trait = head_of_government
+			create_country_leader = {
+				name = "Governor-General Jan Smuts"
+				desc = "POLITICS_JAN_SMUTS_DESC"
+				picture = "Portrait_SAF_Jan_Smuts.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Governor-General Jan Smuts"
+				desc = "POLITICS_JAN_SMUTS_DESC"
+				picture = "Portrait_SAF_Jan_Smuts.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Governor-General Jan Smuts"
+				desc = "POLITICS_JAN_SMUTS_DESC"
+				picture = "Portrait_SAF_Jan_Smuts.tga"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Governor-General Jan Smuts"
+				desc = "POLITICS_JAN_SMUTS_DESC"
+				picture = "Portrait_SAF_Jan_Smuts.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = {}
+			}
+		}
+		add_ideas = SAF_C_F_Stallard_hog_mli
+	}
+	option = {
+		name = saf.39.b #Legally establish the King as a figurehead!
+		ai_chance = { factor = 20 }
+		hidden_effect = {
+			remove_ideas_with_trait = head_of_government
+			create_country_leader = {
+				name = "King Edward VIII"
+				desc = "POLITICS_KING_EDWARD_SAF_DESC"
+				picture = "Portrait_SAF_Edward_VIII.tga"
+				expire = "1965.1.1"
+				ideology = social_democrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "King Edward VIII"
+				desc = "POLITICS_KING_EDWARD_SAF_DESC"
+				picture = "Portrait_SAF_Edward_VIII.tga"
+				expire = "1965.1.1"
+				ideology = social_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "King Edward VIII"
+				desc = "POLITICS_KING_EDWARD_SAF_DESC"
+				picture = "Portrait_SAF_Edward_VIII.tga"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "King Edward VIII"
+				desc = "POLITICS_KING_EDWARD_SAF_DESC"
+				picture = "Portrait_SAF_Edward_VIII.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = {}
+			}
+		}
+		add_ideas = SAF_Jan_C_Smuts_hog_sco
+		random_other_country = {
+			limit = {
+				OR = {
+					tag = CAN
+					tag = GBR
+				}
+				is_faction_leader = yes
+			}
+			add_opinion_modifier = { target = SAF modifier = ITA_likes_govt }
+		}
+	}
+}
+
+
+### PRE-CIVIL WAR EVENTS
+
+# Construction of the Voortrekker Monument
+country_event = {
+	id = saf.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.50"}
+	title = saf.50.t
+	desc = saf.50.d
+	picture = GFX_report_event_SAF_monument
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1937.09.01
+		275 = { is_owned_and_controlled_by = SAF } #Transvaal
+		681 = { is_owned_and_controlled_by = SAF } #Cape
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	option = {
+		name = saf.50.a
+		add_stability = 0.05
+	}
+}
+
+# Preperations for the Centenary Celebrations
+country_event = {
+	id = saf.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.51"}
+	title = saf.51.t
+	desc = saf.51.d
+	picture = GFX_report_event_SAF_cape_town
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1938.07.01
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = social_conservative
+		}
+		owns_state = 275 #Transvaal
+		owns_state = 681 #Cape
+		SAF = { controls_all_owned_states = yes }
+		has_country_flag = SAF_1938_elections_held
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = saf.51.a #It will go ahead as planned!
+		ai_chance = { factor = 50 }
+		add_stability = -0.08
+		set_country_flag = SAF_celebration_full
+	}
+	option = {
+		name = saf.51.b #Perhaps a more modest approach is best
+		ai_chance = { factor = 50 }
+		add_stability = -0.03
+		set_country_flag = SAF_celebration_modest
+	}
+}
+
+# 100th Anniversary of the Great Trek - Modest
+country_event = {
+	id = saf.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.52"}
+	title = saf.52.t
+	picture = GFX_report_event_SAF_centenary
+
+	desc = {
+		text = saf.52.d.national
+		trigger = { has_government = authoritarian_democrat }
+	}
+	desc = {
+		text = saf.52.d.dominion
+		trigger = { has_government = social_conservative }
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1938.08.07
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = social_conservative
+		}
+		owns_state = 275 #Transvaal
+		owns_state = 681 #Cape
+		SAF = { controls_all_owned_states = yes }
+		has_country_flag = SAF_celebration_modest
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = saf.52.a #Could have been worse...
+		trigger = { has_government = authoritarian_democrat }
+		clr_country_flag = SAF_celebration_modest
+		country_event = { id = saf.54 days = 14 }
+	}
+	option = {
+		name = saf.52.b #Oh dear!
+		trigger = { has_government = social_conservative }
+		clr_country_flag = SAF_celebration_modest
+		add_stability = -0.10
+	}
+}
+
+# 100th Anniversary of the Great Trek - Full
+country_event = {
+	id = saf.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.53"}
+	title = saf.52.t
+	picture = GFX_report_event_SAF_centenary
+
+	desc = {
+		text = saf.53.d.national
+		trigger = { has_government = authoritarian_democrat }
+	}
+	desc = {
+		text = saf.53.d.dominion
+		trigger = { has_government = social_conservative }
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1938.08.07
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = social_conservative
+		}
+		owns_state = 275 #Transvaal
+		owns_state = 681 #Cape
+		SAF = { controls_all_owned_states = yes }
+		has_country_flag = SAF_celebration_full
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = saf.53.a #Oh dear!
+		trigger = { has_government = authoritarian_democrat }
+		clr_country_flag = SAF_celebration_full
+		add_stability = -0.10
+	}
+	option = {
+		name = saf.53.b #Could have been worse...
+		trigger = { has_government = social_conservative }
+		clr_country_flag = SAF_celebration_full
+		country_event = { id = saf.54 days = 14 }
+	}
+}
+
+# Inauguration of the Voortrekker Monument - Peaceful result
+country_event = {
+	id = saf.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.54"}
+	title = saf.54.t
+	picture = GFX_report_event_SAF_monument
+
+	desc = {
+		text = saf.54.d.national
+		trigger = { has_government = authoritarian_democrat }
+	}
+	desc = {
+		text = saf.54.d.dominion
+		trigger = { has_government = social_conservative }
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		275 = { is_owned_and_controlled_by = SAF } #Transvaal
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = social_conservative
+		}
+	}
+
+	option = {
+		name = saf.54.a #Huzzah!
+		add_stability = 0.10
+	}
+}
+
+# Dominionist Party's fate
+country_event = {
+	id = saf.79
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.79"}
+	title = saf.79.t
+	desc = saf.79.d
+	picture = GFX_report_event_SAF_parliament_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = saf.79.a
+		add_stability = -0.02
+		set_party_name = { ideology = social_conservative name = SAF_social_conservative_party_Con long_name = SAF_social_conservative_party_long_Con }
+		add_popularity = { ideology = market_liberal popularity = 0.20 }
+	}
+}
+
+### Post-1938 Election Events
+
+# 1943 Elections
+country_event = {
+	id = saf.90
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.90"}
+	title = saf.90.t
+	desc = saf.90.d
+	picture = GFX_report_event_SAF_parliament_3
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = SAF_1943_elections_held
+		remove_all_ministers = yes
+	}
+
+	option = {
+		name = saf.90.a # The Conservative Party
+		ai_chance = { factor = 50 }
+		add_political_power = 25
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		if = {
+			limit = { NOT = { has_completed_focus = SAF_the_restoration } }
+			create_country_leader = {
+				name = "Jan Christiaan Smuts"
+				desc = "POLITICS_JAN_SMUTS_DESC"
+				picture = "Portrait_SAF_Jan_Smuts.tga"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+				traits = {}
+			}
+		}
+		if = {
+			limit = { has_country_leader = { ruling_only = yes name = "King Edward VIII" } }
+			add_ideas = SAF_Jan_C_Smuts_hog_sco
+			else = { add_ideas = SAF_C_F_Stallard_hog_mli }
+		}
+		add_ideas = SAF_Pierre_van_Ryneveld_for_sco
+		add_ideas = SAF_Charles_T_te_Water_eco_sco
+		add_ideas = SAF_HG_Lawrence_sec_sco
+	}
+	option = {
+		name = saf.90.b # The Progressive Party
+		ai_chance = { factor = 50 }
+		add_political_power = 50
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		if = {
+			limit = { NOT = { has_completed_focus = SAF_the_restoration } }
+			create_country_leader = {
+				name = "Nicolaas Havenga"
+				desc = "POLITICS_NICOLAAS_HAVENGA_DESC"
+				picture = "Portrait_SAF_Nicolaas_Havenga.tga"
+				expire = "1965.1.1"
+				ideology = market_liberal_subtype
+				traits = {}
+			}
+		}
+		add_ideas = SAF_Jan_Hendrik_Hofmeyr_hog_mli
+		add_ideas = SAF_L_J_du_Plessis_for_mli
+		add_ideas = SAF_Robert_J_Hudson_eco_mli
+		add_ideas = SAF_Nicolaas_J_de_Wet_sec_mli
+	}
+}
+
+# 1948 Elections
+country_event = {
+	id = saf.91
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.91"}
+	title = saf.90.t
+	desc = saf.90.d
+	picture = GFX_report_event_SAF_parliament_3
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SAF
+		NOT = { has_authoritarian_government = yes }
+		has_country_flag = SAF_1943_elections_held
+		NOT = { has_country_flag = SAF_1948_elections_held }
+	}
+
+	immediate = {
+		set_country_flag = SAF_1948_elections_held
+		remove_all_ministers = yes
+	}
+
+	option = {
+		name = saf.90.a # The Conservative Party
+		ai_chance = { factor = 50 }
+		add_political_power = 25
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		if = {
+			limit = { has_country_leader = { ruling_only = yes name = "King Edward VIII" } }
+			add_ideas = SAF_Jan_C_Smuts_hog_sco
+			else = { add_ideas = SAF_C_F_Stallard_hog_mli }
+		}
+		add_ideas = SAF_Pierre_van_Ryneveld_for_sco
+		add_ideas = SAF_Charles_T_te_Water_eco_sco
+		add_ideas = SAF_HG_Lawrence_sec_sco
+	}
+	option = {
+		name = saf.90.b # The Progressive Party
+		ai_chance = { factor = 50 }
+		add_political_power = 50
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		add_ideas = SAF_Jan_Hendrik_Hofmeyr_hog_mli
+		add_ideas = SAF_L_J_du_Plessis_for_mli
+		add_ideas = SAF_Robert_J_Hudson_eco_mli
+		add_ideas = SAF_Nicolaas_J_de_Wet_sec_mli
+	}
+}
+
+### Extra Events
+
+# South African Communist Party
+country_event = {
+	id = saf.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event saf.100"}
+	title = saf.100.t
+	desc = saf.100.d
+	picture = GFX_report_event_iww_demonstration
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAF
+		date > 1936.1.6
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	option = {
+		name = saf.100.a
+		add_stability = -0.02
+		add_popularity = { ideology = radical_socialist popularity = 0.1 }
+	}
+}

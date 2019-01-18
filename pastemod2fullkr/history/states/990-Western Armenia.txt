@@ -1,0 +1,36 @@
+
+state={
+	id=990
+	name="STATE_990"
+
+	history={
+		owner = OTT
+		add_core_of = OTT
+		buildings = {
+			infrastructure = 3
+			652 = {
+				bunker = 3
+
+			}
+			7470 = {
+				bunker = 2
+
+			}
+			4583 = {
+				bunker = 1
+
+			}
+		}
+		victory_points = {
+			10472 1
+		}
+
+	}
+
+	provinces={
+		652 4583 7470 10472 11880 12376 
+	}
+	manpower=484536
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

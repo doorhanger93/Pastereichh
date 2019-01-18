@@ -1,0 +1,39 @@
+
+state={
+	id=291
+	name="STATE_291"
+	resources={
+		oil=22.000
+	}
+
+	history={
+		owner = OTT
+		add_core_of = OTT
+		add_core_of = IRQ
+		victory_points = {
+			2097 20 
+		}
+		victory_points = {
+			2089 1 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+			2089 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		78 2004 2089 2097 3795 7977 7994 8001 10793 10876 12046 12372 12413 12726 12839 12855 13737 14994 
+	}
+	manpower=1844165
+	buildings_max_level_factor=1.000
+	state_category=city
+}

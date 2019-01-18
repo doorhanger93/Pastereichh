@@ -1,0 +1,38 @@
+
+state={
+	id=105
+	name="STATE_105"
+	resources={
+		chromium=36.000
+		aluminium=112.000
+	}
+
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = MTN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 3
+			9809 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			9809 3 
+		}
+
+	}
+
+	provinces={
+		6913 9809 9821 11858 14555 14556 
+	}
+	manpower=367044
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

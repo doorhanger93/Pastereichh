@@ -1,0 +1,29 @@
+
+state={
+	id=950
+	name="STATE_950"
+
+	history={
+		owner = POR
+		add_core_of = MOZ
+		buildings = {
+			infrastructure = 3
+			8245 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			8245 1 
+		}
+
+	}
+
+	provinces={
+		2120 2193 5155 5177 5212 8245 10697 10963 12935 13963 13980 13995 13997 14004 14007 14023 14030 14034 14585 14597 14605 14612 14720 14737 
+	}
+	manpower=1836300
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

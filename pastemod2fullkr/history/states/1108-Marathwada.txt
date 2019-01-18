@@ -1,0 +1,23 @@
+
+state={
+	id=1108
+	name="STATE_1108"
+
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_claim_by = PRF
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	provinces={
+		1359 1405 4353 5063 10210 10270 12142 12182 15247 15249 15253 15257 15265 15266 15268 
+	}
+	manpower=2270000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

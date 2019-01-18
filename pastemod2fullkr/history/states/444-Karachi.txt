@@ -1,0 +1,23 @@
+
+state={
+	id=444
+	name="STATE_444"
+
+	history={
+		owner = DEH
+		add_core_of = DEH
+		add_claim_by = PRF
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1179 5043 7049 7917 8066 10806 12774 15043 15103 15129 15296 15297 15298 
+	}
+	manpower=463500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

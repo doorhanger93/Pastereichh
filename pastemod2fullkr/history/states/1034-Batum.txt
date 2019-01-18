@@ -1,0 +1,21 @@
+
+state={
+	id=1034
+	name="STATE_1034"
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = OTT
+	}
+
+	provinces={
+		7454 10403 
+	}
+	manpower=120643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=453
+	name="STATE_453"
+	resources={
+	steel = 12.000}
+	history={
+		owner = OTT
+		add_core_of = OTT
+		add_core_of = EGY
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1112 4161 10002 10099 11922 11979 12073 
+	}
+	manpower=27430
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=1174
+	name="STATE_1174"
+	provinces={
+		13654 14549 14552 
+	}
+	history={
+		owner = CRO
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = MTN
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	manpower=12520
+	state_category = enclave
+	buildings_max_level_factor=1.000
+}

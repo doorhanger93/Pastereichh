@@ -1,0 +1,37 @@
+
+state={
+	id=70
+	name="STATE_70"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		
+		victory_points = {
+			9551 2
+		}
+		victory_points = {
+			541 3
+		}
+		victory_points = {
+			11539 2
+		}
+
+	}
+
+	provinces={
+		541 3484 3537 9551 11522 11539 
+	}
+	manpower=1092000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

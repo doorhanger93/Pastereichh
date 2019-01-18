@@ -1,0 +1,29 @@
+state={
+	id=1166
+	name="STATE_1166"
+	provinces={
+		575 
+	}
+	history={
+		owner = BEL
+		add_core_of = BEL
+		add_claim_by = FRA
+		add_claim_by = NFA
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			575 = {
+				naval_base = 2
+
+			}
+
+		}
+		victory_points = {
+			575 5 
+		}
+
+	}
+	manpower=31552
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

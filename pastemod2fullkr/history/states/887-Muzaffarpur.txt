@@ -1,0 +1,28 @@
+
+state={
+	id=887
+	name="STATE_887"
+
+	history={
+		owner = DEH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			4987 3 
+		}
+		add_core_of = NEP
+		add_core_of = DEH
+
+	}
+
+	provinces={
+		4987 5310 12892 
+	}
+	manpower=3420000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

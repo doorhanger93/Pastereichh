@@ -1,0 +1,26 @@
+
+state={
+	id=1023
+	name="STATE_1023"
+
+	history={
+		owner = JBS
+		add_core_of = JBS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			12702 = {
+				naval_base = 2
+
+			}
+
+		}
+	}
+
+	provinces={
+		1955 12702 13726 13729 
+	}
+	manpower=168400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=1266
+	name="STATE_1266"
+	provinces={
+		374 3271 3326 6218 6263 6298 6325 6349 9264 
+	}
+	history={
+		owner = GER
+		add_core_of = GER
+		victory_points = {
+			3326 15
+		}
+		victory_points = {
+			6298 2
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+
+	}
+	manpower=1060500
+	state_category = town
+	buildings_max_level_factor=1.000
+}

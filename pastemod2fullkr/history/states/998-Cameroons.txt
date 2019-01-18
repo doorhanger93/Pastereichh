@@ -1,0 +1,19 @@
+state={
+	id=998
+	name="STATE_998"
+	history={
+		owner = MAF
+		add_core_of=NGR
+		add_core_of = MAF
+		add_core_of = KAM
+		buildings={
+			infrastructure=2
+		}
+	}
+	provinces={
+		13659 13660 
+	}
+	manpower=762551
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

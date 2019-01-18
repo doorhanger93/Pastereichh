@@ -1,0 +1,24 @@
+
+state={
+	id=946
+	name="STATE_946"
+	resources={
+		chromium=40.000
+	}
+
+	history={
+		owner = SAF
+		add_core_of = SAF
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		14564 14570 14571 14580 14590 
+	}
+	manpower=1115540
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

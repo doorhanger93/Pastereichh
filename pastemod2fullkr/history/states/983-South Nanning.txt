@@ -1,0 +1,26 @@
+
+state={
+	id=983
+	name="STATE_983"
+	resources={
+		steel=2.000
+	}
+
+	history={
+		owner = LEP
+		add_core_of = LEP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		1018 4023 4160 7135 10004 
+	}
+	manpower=1650000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

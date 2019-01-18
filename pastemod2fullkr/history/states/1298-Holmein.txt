@@ -1,0 +1,22 @@
+
+state={
+	id=1298
+	name="STATE_1298"
+	provinces={
+		7647 12317
+	}
+	history={
+		owner = SIA
+		add_core_of = SIA
+		add_core_of = BUR
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+	}
+	manpower=0
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

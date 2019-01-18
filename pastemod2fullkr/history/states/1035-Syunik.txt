@@ -1,0 +1,19 @@
+state={
+	id=1035
+	name="STATE_1035"
+	provinces={
+		4660 6642 
+	}
+	history={
+		owner = ARM
+		add_core_of = ARM
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=187643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

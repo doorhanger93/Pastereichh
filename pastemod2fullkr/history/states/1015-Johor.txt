@@ -1,0 +1,25 @@
+state={
+	id=1015
+	name="STATE_1015"
+	provinces={
+		4424 10313 13704 
+	}
+	resources={
+		rubber=48.000
+	}
+	history={
+		owner = GEA
+		add_core_of = GEA
+		add_core_of = MLY
+		victory_points = {
+			13704 2
+		}
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+	manpower=528200
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

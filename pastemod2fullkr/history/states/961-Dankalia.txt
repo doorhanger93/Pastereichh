@@ -1,0 +1,23 @@
+
+state={
+	id=961
+	name="STATE_961"
+
+	history={
+		owner = ETH
+		add_core_of = ERT
+		add_core_of = ETH
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		8043 14162 14163 14173 
+	}
+	manpower=77000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

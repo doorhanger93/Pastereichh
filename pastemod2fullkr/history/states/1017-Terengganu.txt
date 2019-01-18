@@ -1,0 +1,26 @@
+state={
+	id=1017
+	name="STATE_1017"
+	resources={
+		rubber=38.000
+	}
+	provinces={
+		1348 4355 12199 
+	}
+	history={
+		owner = SIA
+		add_core_of = GEA
+		add_core_of = MLY
+		victory_points = {
+			7399 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+	manpower=189000
+	state_category=town
+	buildings_max_level_factor=1.000
+}

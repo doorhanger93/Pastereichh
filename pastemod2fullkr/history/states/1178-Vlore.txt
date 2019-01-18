@@ -1,0 +1,27 @@
+state={
+	id=1178
+	name="STATE_1178"
+	provinces={
+		11767 
+	}
+	history={
+		owner = ALB
+		add_core_of = ALB
+		victory_points = {
+			11767 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11767 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+	manpower=54800
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

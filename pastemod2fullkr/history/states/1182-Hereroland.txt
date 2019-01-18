@@ -1,0 +1,20 @@
+
+state={
+	id=1182
+	name="STATE_1182"
+
+	history={
+		owner = MAF
+		add_core_of = MAF
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		9977 12519 14788 14792 14795 14797 14805 14809 14813 14818 
+	}
+	manpower=46730
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

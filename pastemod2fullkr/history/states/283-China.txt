@@ -1,0 +1,30 @@
+
+state={
+	id=283
+	name="STATE_283"
+	resources={
+		tungsten=1.000
+	}
+
+	history={
+		owner = XSM
+		add_core_of = XSM
+		buildings = {
+			infrastructure = 3
+			arms_factory = 0
+
+		}
+		1938.10.25 = {
+			owner = FRA
+
+		}
+
+	}
+
+	provinces={
+		531 4313 7397 7911 12797 12882 
+	}
+	manpower=2342600
+	buildings_max_level_factor=1.000
+	state_category=town
+}

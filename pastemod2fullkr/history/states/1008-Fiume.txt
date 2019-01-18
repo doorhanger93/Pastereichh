@@ -1,0 +1,24 @@
+state={
+	id=1008
+	name="STATE_1008"
+	provinces={
+		11564 
+	}
+	history = {
+		victory_points = {
+			11564 1 
+		}
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 7
+			11564 = {
+				naval_base = 3
+
+			}
+		}
+	}
+	manpower=106800
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

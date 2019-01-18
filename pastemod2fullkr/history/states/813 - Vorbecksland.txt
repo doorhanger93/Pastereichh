@@ -1,0 +1,25 @@
+
+state={
+	id=813
+	name="STATE_813"
+
+	history={
+		owner = MAF
+		add_core_of = MAF
+		victory_points = {
+			5199 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+		}
+	}
+
+	provinces={
+		5199 11598 13649 13949 13950 13958 13960 13962 13967 13968 13969 
+	}
+	manpower=196000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

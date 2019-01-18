@@ -1,0 +1,21 @@
+
+state={
+	id=1231
+	name="STATE_1231"
+	provinces={
+		1201 7107 
+	}
+	history={
+		owner = OTT
+		add_core_of = OTT
+		add_core_of = PAL
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=251900
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

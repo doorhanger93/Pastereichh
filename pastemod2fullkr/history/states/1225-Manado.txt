@@ -1,0 +1,30 @@
+
+state={
+	id=1225
+	name="STATE_1225"
+	provinces={
+		1098 1289 1484 1505 1518 1561 4262 4307 4493 4537 7311 10153 10169 10197 12358 
+	}
+	resources={
+		rubber=23.000
+		aluminium=1.000
+		steel=3.000
+	}
+	history={
+		owner = DEI
+		add_core_of = DEI
+		add_core_of = INS
+		buildings = {
+			infrastructure = 2
+			10153 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+	manpower=1138665	
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

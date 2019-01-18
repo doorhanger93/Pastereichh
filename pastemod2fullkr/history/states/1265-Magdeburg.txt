@@ -1,0 +1,27 @@
+
+state={
+	id=1265
+	name="STATE_1265"
+	provinces={
+		3522 6487 9238 9456 11359 11468 
+	}
+	history={
+		owner = GER
+		add_core_of = GER		
+		victory_points = {
+			3522 10
+		}
+		victory_points = {
+			6487 8
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+
+		}
+
+	}
+	manpower=1820400
+	state_category = large_town
+	buildings_max_level_factor=1.000
+}
